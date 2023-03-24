@@ -70,3 +70,12 @@ mysql -uroot -e "use radius; DELETE FROM userinfo WHERE username = ‘$USERNAME'
 - Cambia en el script el password de la base de datos y los nombres de las tablas, tambien he filtrado las fichas en la tabla `usadas` por grupos
 
 - Este script fue tomado de `https://aacable.wordpress.com/tag/radius-expired-user/` y modificado para acomodarlo a mis tablas.
+
+- Respaldo de la db
+```
+mysqldump -p -u root radius > dbname.sql
+```
+- Restaurar db
+```
+mysql -p -u root radius < dbname.sql
+```
